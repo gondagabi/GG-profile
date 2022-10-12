@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/cce3ee1cec.js"></script>
+</head>
+<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gruppo&family=Josefin+Sans:wght@200&family=Raleway:wght@200;400&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+<!--ICON GALLERY-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { 
+  max-height: 95vh;
+  position: fixed;    /*position fixed - scrollbar none*/
+  }
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+   }
+
+/*media beállítások*/
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row  {   
+    flex-direction: column-reverse;
+    padding: 0;
+        }
+}
+@media screen and (max-width: 600px) {
+ .navbar {
+    float: none;
+    display: block;
+ }
+}
+@media screen and (max-width: 600px) {
+  .overlay {
+    display: none; /*overlay effect non display on small screen*/
+  }
+}
+@media screen and (max-width: 600px) {
+   #header, #first-a {
+        display: none;
+ }
+}
+
+/* HEADER */
+#header {
+  font-size: 2rem;
+  font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));  
+  text-align: center;
+    padding: 18px;
+    background-color: rgb(89, 112, 112);
+    text-decoration-color: bisque;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    color: aliceblue;
+    opacity: 0.8;
+    margin:0;
+    letter-spacing: 0.1em;
+    }
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #fff;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: rgb(19, 53, 53);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300))); 
+}
+#first-a {
+    float: left;
+    color:rgb(70, 102, 102);
+}
+/* Column container */
+.row {  
+   display: flex;
+   }
+/* Sidebar/left column */
+.side {
+  float: left;
+  width: 80%;
+  flex: 45%;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  flex-wrap:nowrap;
+    }
+/* Main column */
+.main {   
+  float: left;
+  width: 80%;
+  flex: 55%;
+  background-color: rgb(255, 255, 255);
+  padding: 60px 8%;
+  }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+filter: grayscale(80%);
+object-fit: cover;
+display: flex;
+margin-block-end: auto;
+}
+
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.hero {
+padding-top: 0px;
+padding-bottom: 10px;
+text-align: center;
+font-family: 'Josefin Sans', sans-serif;
+}
+.hero h2{
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));  /*viewport flexible font-size*/
+}
+h3 {
+  font-size: 1rem;
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300))); 
+}
+.about {
+   font-size: 0.8rem;
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300))); 
+}
+.work-edu {
+  display: table;
+  clear: both;
+  padding-top: 20px;
+  font-size: larger;
+  font-size: 0.8rem;
+  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300))); 
+  opacity: 0.7;
+}
+#space {
+  padding-top: 20px;
+}
+/* Contact links */
+ ul {
+  list-style-type: none;
+  padding-top: 30px;
+  padding-left: 0;
+   }
+ li {
+  display: inline;
+  text-align: left;
+  font-size: x-large;
+  letter-spacing: 0.4em;
+  }
+  i {
+    color:rgb(33, 83, 83)
+      }
+  
+</style>
+
+</head>
+<body>
+
+<!--NAVBAR-->
+<div class="navbar">
+  <a id="first-a" href="#">AboutMe</a>
+  <a href="Profile.html" target="_blank">Profile</a>
+  <a href="#about">About Me</a>
+  <a href="#link1">Contact</a>
+</div> 
+
+<!--HEADER--> 
+<h1 id="header">The meaning of life is giving life a meaning!</h1>
+  <section>
+<div class="row">
+<!--SIDE-->
+    <div class="side">
+      <img src="/assets/gg.jpg" alt="Gonda Gabriella profile pic" style="width: 100%;">
+    </div>
+
+<!--MAIN-->
+<div class="main">
+    <div class="hero">
+        <h2>Gonda Gabriella</h2>
+        <h3>IT assistant, Web Developer, Yarn Artist</h3>
+        <a href="éadhfé"></a>
+    </div>   
+    <div id="about" class="about">
+        <p> I am a corporate worker by day - at INVITECH -  a big IT company in Hungary - where I am asset managing assistant and logistic agent.</p>
+        <p>I always looking for new challanges and areas applying creativ solutions. That's how I found learning and doing web designing and developing. </p>
+        <p>In my freetime - although it gradually less and less -  making crocheted dolls for sell. I love making theese kind figures to see - as they form from the nothing and they take shape. </p>
+        <p>Since I am sticking to my chair at least 8 hours on an avarege day, I try to go out running as often as I can.  </p>
+    </div>
+<div class="work-edu">
+<div id="work"><strong>WORK</strong><br>INVITECH</div>
+<div id="space"></div>
+<div id="edu"><strong>EDUCATION</strong><br>Szent István Agricultural University</div>
+</div>
+
+ <!--LINKS-->
+        <ul>
+        <li id="link1"><a href="mailto:gondagabi74@gmail.com/#"></a><i class="fa fa-google" aria-hidden="true"></i></li>
+        <li id="link2"><a href="https://facebook.com/gabriella.gonda.74/#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li id="link3"><a href="https://hu.pinterest.com/gabriellagonda7/my-yarn-art//#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li id="link2"><a href="https://https://github.com/gondagabi/#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+      </ul>
+    
+    <!--end .row-->
+</div>
+</section>
+
+</body>
+</html>
